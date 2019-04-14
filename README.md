@@ -10,4 +10,4 @@ Some `docker-compose.yaml` examples of [Gogs].
 
 > MIT License
 >
-> Copyright (c) 2017 Yan QiDong <yanqd0@outlook.com>
+> Copyright (c) 2017~2019 Yan QiDong <yanqd0@outlook.com>
