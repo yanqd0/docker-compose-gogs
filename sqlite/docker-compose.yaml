@@ -1,0 +1,27 @@
+# This file use SQLite3 as the database.
+# And the port 80 is used directly,
+# which is suitable if the server is exclusive to Gogs.
+
+---
+version: "3"
+
+services:
+  gogs:
+    image: gogs/gogs
+    ports:
+      # The ports after ':' depends on `app.ini`.
+      # 3000 and 22 are the defaults.
+      # 3000 is the http port.
+      # If the server is exclusive to Gogs, `80:3000` is better.
+      - "3000:3000"
+      # 22 is for sshd in gogs.
+      # Before this, the sshd port of host should be modified,
+      # which is in `/etc/ssh/sshd_config`.
+      - "22:22"
+      # And the download command will be something like:
+      #   git clone git@example.com/user/repo.git
+      # Or it will be something ugly like this:
+      #   git clone ssh://git@example.com:10022/user/repo.git
+    volumes:
+      - /srv/gogs/data:/data
+      - /srv/gogs/log:/app/gogs/log

@@ -1,6 +1,6 @@
 # docker-compose-gogs
 
-Some docker-compose.yml examples of [Gogs].
+Some `docker-compose.yaml` examples of [Gogs].
 
 [Gogs]:https://gogs.io/
 
